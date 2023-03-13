@@ -1,0 +1,13 @@
+# common usage
+alias ls='ls --color=auto'
+alias ll='ls -lah --color=auto'
+alias grep='grep --color=auto'
+alias t="tmux"
+alias v="vim"
+alias g="git"
+
+# redefine defult action
+alias mv="mv -i"	# -i prompts before overwrite
+alias mkdir="mkdir -p"	# -p make parent dirs as needed
+alias df="df -h"	# -h prints human readable format
+

@@ -1,0 +1,8 @@
+
+# ubuntu server
+## i want set this for virtualbox server so i can use `ssh cat` instead of `ssh user@hostname`,but the virtualbox server have dynamic ipaddress,i try a lot,but unfortunately it fails,so now just use `ssh user@hostname` to connect the server
+#Host cat
+#user cat
+#HostName 192.168.8.15 #check the ip use `ip a` -->  enp0s3
+#IdentityFile ~/.ssh/ubuntu-server
+#LocalForward 9999 localhost:8888
