@@ -19,7 +19,7 @@ echo "done"
 
 # change to the dotfiles directory
 echo -n "Changing to the $dir directory ..."
-cd $dir
+"cd $dir || exit"
 echo "done"
 
 ################################
@@ -27,9 +27,9 @@ echo "done"
 ################################
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
+    mv ~/."$file" ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
-    ln -sf $dir/$file ~/.$file
+    ln -sf $dir/"$file" ~/."$file"
     echo "Delete .README.md"
     rm ~/.README.md
 done
@@ -46,7 +46,7 @@ if [[ -f /bin/zsh || -f /usr/bin/zsh ]]; then
     fi
     # Set the default shell to zsh if it isn't currently set to zsh
     if [[ ! $(echo "$SHELL") == $(which zsh) ]]; then
-        chsh -s $(which zsh)
+        chsh -s "$(which zsh)"
     fi
 else
     # If zsh isn't installed, get the platform of the current machine
@@ -150,3 +150,26 @@ fi
 }
 
 install_vim
+
+# install shellcheck
+install_shellcheck () {
+# Test to see if shellcheck is installed:
+if [[ ! -f /bin/shellcheck || ! -f /usr/bin/shellcheck ]]; then
+    platform=$(uname);
+    # If the platform is Linux, try an apt-get to install shellcheck and then recurse
+    if [[ $platform == 'Linux' ]]; then
+        if [[ -f /etc/redhat-release ]]; then
+            sudo yum install shellcheck 
+        fi
+        if [[ -f /etc/debian_version ]]; then
+            sudo apt install shellcheck 
+        fi
+    # If the platform is OS X, tell the user to install shellcheck :)
+    elif [[ $platform == 'Darwin' ]]; then
+        echo "Please install shellcheck, then re-run this script!"
+        exit
+    fi
+fi 
+}
+
+install_shellcheck
