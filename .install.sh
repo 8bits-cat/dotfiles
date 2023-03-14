@@ -30,6 +30,8 @@ for file in $files; do
     mv ~/.$file ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
     ln -sf $dir/$file ~/.$file
+    echo "Delete .README.md"
+    rm ~/.README.md
 done
 
 ###################################
@@ -71,7 +73,7 @@ install_zsh_zplug
 
 # install tmux
 install_tmux () {
-# Test to see if tmuxis installed:
+# Test to see if tmux is installed:
 if [[ ! -f /bin/tmux || ! -f /usr/bin/tmux ]]; then
     platform=$(uname);
     # If the platform is Linux, try an apt-get to install tmux and then recurse
@@ -101,3 +103,50 @@ install_fzf (){
 }
 
 install_fzf
+
+
+# install tldr
+install_tldr () {
+# Test to see if tldr is installed:
+if [[ ! -f /bin/tldr || ! -f /usr/bin/tldr ]]; then
+    platform=$(uname);
+    # If the platform is Linux, try an apt-get to install tldr and then recurse
+    if [[ $platform == 'Linux' ]]; then
+        if [[ -f /etc/redhat-release ]]; then
+            sudo yum install tldr 
+        fi
+        if [[ -f /etc/debian_version ]]; then
+            sudo apt install tldr 
+        fi
+    # If the platform is OS X, tell the user to install tldr :)
+    elif [[ $platform == 'Darwin' ]]; then
+        echo "Please install tldr, then re-run this script!"
+        exit
+    fi
+fi 
+}
+
+install_tldr
+
+# install vim
+install_vim () {
+# Test to see if vim is installed:
+if [[ ! -f /bin/vim || ! -f /usr/bin/vim ]]; then
+    platform=$(uname);
+    # If the platform is Linux, try an apt-get to install vim and then recurse
+    if [[ $platform == 'Linux' ]]; then
+        if [[ -f /etc/redhat-release ]]; then
+            sudo yum install vim 
+        fi
+        if [[ -f /etc/debian_version ]]; then
+            sudo apt install vim 
+        fi
+    # If the platform is OS X, tell the user to install vim :)
+    elif [[ $platform == 'Darwin' ]]; then
+        echo "Please install vim, then re-run this script!"
+        exit
+    fi
+fi 
+}
+
+install_vim
