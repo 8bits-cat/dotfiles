@@ -43,7 +43,7 @@ if [[ -f /bin/zsh || -f /usr/bin/zsh ]]; then
 	    sudo apt install zplug
     fi
     # Set the default shell to zsh if it isn't currently set to zsh
-    if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
+    if [[ ! $(echo "$SHELL") == $(which zsh) ]]; then
         chsh -s $(which zsh)
     fi
 else
