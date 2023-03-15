@@ -30,9 +30,13 @@ for file in $files; do
     mv ~/."$file" ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
     ln -sf $dir/"$file" ~/."$file"
+done
+
+if [[ -f ~/.README.md ]]; then
+
     echo "Delete .README.md"
     rm ~/.README.md
-done
+fi
 
 ###################################
 #     install powerful tools
