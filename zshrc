@@ -31,8 +31,6 @@ zplug load --verbose
 #autoload -Uz promptinit
 #promptinit
 #prompt walters # see Zsh Prompt Theme below
-# git status prompt
-source ~/zsh-git-prompt/zshrc.sh
 
 # Keep 5000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=5000
