@@ -13,3 +13,7 @@ if you dont need them, edit `.install.sh`
 3. `chmod +x .install.sh`
 
 4. `./.install.sh`
+***
+# For myself
+- use [alacritty](https://github.com/alacritty/alacritty/blob/master/INSTALL.md) terminal emulator
+- use [powerlevel10k](https://github.com/romkatv/powerlevel10k#zplug)(i already set it in zplug) to highly customizable zsh,so maybe need manual install [fonts](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k) and run `p10k configure`
