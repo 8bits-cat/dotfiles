@@ -28,9 +28,11 @@ fi
 zplug load --verbose
 
 # Set up the prompt - if you load Theme with zplugin as in this example, this will be overriden by the Theme. If you comment out the Theme in zplugins, this will be loaded.
-autoload -Uz promptinit
-promptinit
-prompt walters # see Zsh Prompt Theme below
+#autoload -Uz promptinit
+#promptinit
+#prompt walters # see Zsh Prompt Theme below
+# git status prompt
+source ~/zsh-git-prompt/zshrc.sh
 
 # Keep 5000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=5000
