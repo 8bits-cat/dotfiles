@@ -1,0 +1,9 @@
+jeffreytse/zsh-vi-mode
+plugins/command-not-found, from:oh-my-zsh
+plugins/git, from:oh-my-zsh
+plugins/sudo, from:oh-my-zsh
+romkatv/powerlevel10k, as:theme depth:1
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+zsh-users/zsh-history-substring-search
+zsh-users/zsh-syntax-highlighting

@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # set path if required
 # export PATH="$PATH:/usr/bin"
 
@@ -15,7 +22,8 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-completions"
-zplug "themes/robbyrussell", from:oh-my-zsh, as:theme   # Theme
+zplug romkatv/powerlevel10k, as:theme, depth:1
+#zplug "themes/robbyrussell", from:oh-my-zsh, as:theme   # Theme
 zplug "jeffreytse/zsh-vi-mode"	# A better and friendly vi(vim) mode plugin for ZSH
 
 # zplug - install/load new plugins when zsh is started or reloaded
@@ -45,3 +53,6 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
