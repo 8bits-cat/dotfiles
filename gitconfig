@@ -1,2 +1,5 @@
 [alias]
 	graph = log --all --graph --decorate --oneline
+[user]
+	name = 8bits-cat
+	email = x103h92@gmail.com
