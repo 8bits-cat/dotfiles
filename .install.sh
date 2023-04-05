@@ -27,10 +27,10 @@ echo "done"
 ################################
 for file in $files; do
     if [[ -f ~/."$file" ]]; then
-        echo "Moving any existing dotfiles from ~ to $olddir"
+        echo "Moving .$file from ~ to $olddir"
         mv ~/."$file" ~/dotfiles_old/
     fi
-    echo "Creating symlink to $file in home directory."
+    echo "Creating symlink to $file in ~."
     ln -sf $dir/"$file" ~/."$file"
 done
 # delete the REDEME.md symlink
