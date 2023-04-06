@@ -16,4 +16,4 @@ if you dont need them, edit `.install.sh`
 ***
 # For myself
 - use [alacritty](https://github.com/alacritty/alacritty/blob/master/INSTALL.md) terminal emulator
-- use [powerlevel10k](https://github.com/romkatv/powerlevel10k#zplug)(i already set it in zplug) to highly customizable zsh,so maybe need manual install [fonts](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k) and run `p10k configure`
+- use [powerlevel10k](https://github.com/romkatv/powerlevel10k#getting-started) to highly customizable zsh,(i already set it in zplug ) so just need manual execute step-1,3,4
