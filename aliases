@@ -4,7 +4,6 @@ alias ll='ls -lah --color=auto'
 alias grep='grep --color=auto'
 alias t="tmux"
 alias v="vim"
-alias g="git"
 
 # redefine defult action
 alias mv="mv -i"	# -i prompts before overwrite
