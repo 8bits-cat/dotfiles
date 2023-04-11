@@ -115,6 +115,8 @@ call plug#begin()
 " Colorschemes
 	Plug 'chriskempson/base16-vim'         " Base16 themes
 	Plug 'gerw/vim-hilinktrace'            " Syntax Highlighting Tracer
+" debugger
+	Plug 'dense-analysis/ale'
 call plug#end()
 
 "--------------------------------
