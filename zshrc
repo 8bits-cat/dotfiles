@@ -6,7 +6,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # set path if required
-# export PATH="$PATH:/usr/bin"
+# add kernprof to PATH
+export PATH="$PATH:/home/cat/.local/bin"
 
 # Aliases
 if [ -f ~/.aliases ]; then

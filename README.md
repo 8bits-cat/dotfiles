@@ -17,3 +17,7 @@ if you dont need them, edit `.install.sh`
 # For myself
 - use [alacritty](https://github.com/alacritty/alacritty/blob/master/INSTALL.md) terminal emulator
 - use [powerlevel10k](https://github.com/romkatv/powerlevel10k#getting-started) to highly customizable zsh,(i already set it in zplug ) so just need manual execute step-1,3,4
+# Manual install some tools
+**line_profiler**:`pip install line_profiler`,if there no pip it also need
+to install pip.
+**memory_profiler**:`pip install -U memory_profiler`
