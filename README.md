@@ -2,7 +2,7 @@
 ## summury
 personal dotfiles.
 
-it will backup old dotfiles and creat symlinks to `~`,check and install tools like `zsh&zplug`、`tmux`、`fzf`...etc 
+it will backup old dotfiles and creat symlinks to `~`,check and install tools like `zsh&zplug`、`tmux`...etc 
 
 if you dont need them, edit `.install.sh`
 ## how to use 
@@ -14,10 +14,12 @@ if you dont need them, edit `.install.sh`
 
 4. `./.install.sh`
 ***
-# For myself
+# Manual operate 
+## terminal emulator
 - use [alacritty](https://github.com/alacritty/alacritty/blob/master/INSTALL.md) terminal emulator
 - use [powerlevel10k](https://github.com/romkatv/powerlevel10k#getting-started) to highly customizable zsh,(i already set it in zplug ) so just need manual execute step-1,3,4
-# Manual install some tools
-**line_profiler**:`pip install line_profiler`,if there no pip it also need
-to install pip.
-**memory_profiler**:`pip install -U memory_profiler`
+## tools
+### python profiler
+Ensure pip has been installed.
+- **line_profiler**:`pip install line_profiler`
+- **memory_profiler**:`pip install -U memory_profiler`

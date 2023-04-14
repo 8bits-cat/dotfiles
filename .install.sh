@@ -109,30 +109,6 @@ install_fzf (){
 
 install_fzf
 
-
-# install tldr
-install_tldr () {
-# Test to see if tldr is installed:
-if [[ ! -f /bin/tldr || ! -f /usr/bin/tldr ]]; then
-    platform=$(uname);
-    # If the platform is Linux, try an apt-get to install tldr and then recurse
-    if [[ $platform == 'Linux' ]]; then
-        if [[ -f /etc/redhat-release ]]; then
-            sudo yum install tldr 
-        fi
-        if [[ -f /etc/debian_version ]]; then
-            sudo apt install tldr 
-        fi
-    # If the platform is OS X, tell the user to install tldr :)
-    elif [[ $platform == 'Darwin' ]]; then
-        echo "Please install tldr, then re-run this script!"
-        exit
-    fi
-fi 
-}
-
-install_tldr
-
 # install vim
 install_vim () {
 # Test to see if vim is installed:
@@ -156,26 +132,3 @@ fi
 
 install_vim
 
-## use vim plug to debugger ,so doesn't need shellcheck anymore
-## install shellcheck
-#install_shellcheck () {
-## Test to see if shellcheck is installed:
-#if [[ ! -f /bin/shellcheck || ! -f /usr/bin/shellcheck ]]; then
-#    platform=$(uname);
-#    # If the platform is Linux, try an apt-get to install shellcheck and then recurse
-#    if [[ $platform == 'Linux' ]]; then
-#        if [[ -f /etc/redhat-release ]]; then
-#            sudo yum install shellcheck 
-#        fi
-#        if [[ -f /etc/debian_version ]]; then
-#            sudo apt install shellcheck 
-#        fi
-#    # If the platform is OS X, tell the user to install shellcheck :)
-#    elif [[ $platform == 'Darwin' ]]; then
-#        echo "Please install shellcheck, then re-run this script!"
-#        exit
-#    fi
-#fi 
-#}
-#
-#install_shellcheck
