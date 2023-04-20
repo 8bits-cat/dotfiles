@@ -2,7 +2,7 @@
 ## summury
 personal dotfiles.
 
-it will backup old dotfiles and creat symlinks to `~`,check and install tools like `zsh&zplug`、`tmux`...etc 
+it will backup old dotfiles and creat symlinks to `~`,check and install tools like `zsh&zplug`、`tmux`…etc 
 
 if you dont need them, edit `.install.sh`
 ## how to use 
