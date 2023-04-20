@@ -17,13 +17,13 @@ if you dont need them, edit `.install.sh`
 # Manual operate (select to install)
 ## terminal emulator
 - use [alacritty](https://github.com/alacritty/alacritty/blob/master/INSTALL.md) terminal emulator
-- use [powerlevel10k](https://github.com/romkatv/powerlevel10k#getting-started) to highly customizable zsh,(i already set it in zplug ) so just need manual execute step-1,3,4
+- use [powerlevel10k](https://github.com/romkatv/powerlevel10k#getting-started) to highly customizable zsh,(i already set it in zplug ) so may need to manual execute step-1,3,4
 ## tools
 ### wireshark
 - `apt install wireshark`
 ### htop
 - [see details](https://github.com/htop-dev/htop),and install it
 ### python profiler
-Ensure pip has been installed.
+install pip aboveall 
 - **line_profiler**:`pip install line_profiler`
 - **memory_profiler**:`pip install -U memory_profiler`
