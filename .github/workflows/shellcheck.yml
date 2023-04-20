@@ -25,4 +25,4 @@ jobs:
         with:
           ignore_names: bashrc zshrc
           ignore_paths: zplug
-          severity: error warning
+          severity: warning
