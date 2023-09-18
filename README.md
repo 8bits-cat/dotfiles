@@ -27,3 +27,9 @@ if you dont need them, edit `.install.sh`
 install pip aboveall 
 - **line_profiler**:`pip install line_profiler`
 - **memory_profiler**:`pip install -U memory_profiler`
+### python3
+- if you need python3 just install it:)
+### sqlite
+- [downloadpage](https://sqlite.org/download.html)
+- then read README.txt
+- final use `ln` to link sqlite to ./usr/local/bin
