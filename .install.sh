@@ -132,3 +132,16 @@ fi
 
 install_vim
 
+
+# install nvm
+install_nvm (){
+    if [[ ! -d ~/.nvm ]]; then
+    cd ~/
+    git clone https://github.com/nvm-sh/nvm.git .nvm
+    cd ~/.nvm
+    git checkout v0.39.5
+    . ./nvm.sh
+    fi
+}
+
+install_nvm
